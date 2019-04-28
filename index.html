@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+<header class="globalNav noDropdownTransition">
+    <div class="container-lg">
+        <ul class="navRoot">
+
+
+            <li class="navSection primary">
+
+                <a class="rootLink item-products hasDropdown colorize" data-dropdown="products">
+                    Products
+                </a>
+                <a class="rootLink item-developers hasDropdown colorize" data-dropdown="developers">
+                    Developers
+                </a>
+
+                <a class="rootLink item-company hasDropdown colorize" data-dropdown="company">
+                    Company
+                </a>
+
+
+            </li>
+
+            <li class="navSection secondary">
+                <a class="rootLink item-support colorize">
+
+                </a>
+            </li>
+
+
+            <li class="navSection mobile">
+                <a class="rootLink item-mobileMenu colorize"><h2>Menu</h2></a>
+                <div class="popup">
+                    <div class="popupContainer">
+                        <a class="popupCloseButton">Close</a>
+                        <div class="mobileProducts">
+                            <h4>Developers</h4>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="dropdownRoot">
+        <div class="dropdownBackground" style="transform: translateX(452px) scaleX(0.707692) scaleY(1.1075);">
+            <div class="alternateBackground" style="transform: translateY(255.53px);"></div>
+        </div>
+        <div class="dropdownArrow" style="transform: translateX(636px) rotate(45deg);"></div>
+        <div class="dropdownContainer" style="transform: translateX(452px); width: 368px; height: 443px;">
+            <div class="dropdownSection left" data-dropdown="products">
+                <div class="dropdownContent">
+
+                    <div class="linkGroup">
+                        <ul class="productsGroup">
+                            <li><a class="linkContainer item-payments" href="#">
+                                <div class="productLinkContent">
+                                    <h3 id="payments-title" class="linkTitle"></h3>
+                                    <p id="payments-sub-title" class="linkSub"></p>
+                                </div>
+                            </a></li>
+                            <li><a class="linkContainer item-subscriptions" href="#">
+                                <div class="productLinkContent">
+                                    <h3 id="billing-title" class="linkTitle"></h3>
+                                    <p id="billing-sub-title" class="linkSub"></p>
+                                </div>
+                            </a></li>
+                            <li><a class="linkContainer item-connect" href="#">
+                                <div class="productLinkContent">
+                                    <h3 id="content-title" class="linkTitle"></h3>
+                                    <p id="content-sub-title" class="linkSub"></p>
+                                </div>
+                            </a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="dropdownSection active" data-dropdown="developers">
+                <div class="dropdownContent">
+                    <div class="linkGroup documentationGroup">
+                        <a class="linkContainer withIcon item-documentation" href="#">
+                            <h3 class="linkTitle linkIcon">
+                                <svg width="17" height="17">
+                                    <path fill="#87BBFD" class="hover-fillLight"
+                                          d="M.945 1.998h3.632C6.744 1.998 8.5 3.005 8.5 4.83v11.583c-.512 0-1.015-.337-1.33-.59-1.03-.828-3.057-.828-5.222-.828H.945A.944.944 0 0 1 0 14.052V2.944C0 2.422.423 2 .945 2z"></path>
+                                    <path fill="#6772E5" class="hover-fillDark"
+                                          d="M16.055 1.998h-3.632C10.257 1.998 8.5 3.005 8.5 4.83v11.583c.512 0 1.015-.337 1.33-.59 1.03-.828 3.057-.828 5.222-.828h1.003A.944.944 0 0 0 17 14.05V2.945A.944.944 0 0 0 16.055 2z"></path>
+                                </svg>
+                                <span id="documentation-title"></span>
+                            </h3>
+                            <span id="documentation-sub-title" class="linkSub"></span>
+                        </a>
+
+                    </div>
+
+                    <ul class="linkGroup linkList developersGroup">
+                        <li><a class="linkContainer item-apiReference" href="#">
+                            <h3 class="linkTitle linkIcon">
+                                <svg width="17" height="17">
+                                    <path d="M2 15h13M2 11h13M2 7h13M2 3h13" fill="none" stroke="#6772e5"
+                                          class="hover-strokeDark" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                </svg>
+                                <span id="full-api-reference"></span>
+                            </h3>
+                        </a></li>
+                        <li><a class="linkContainer item-apiStatus" href="#">
+                            <h3 class="linkTitle linkIcon">
+                                <svg width="17" height="17">
+                                    <path d="M1 9h2.95l3-6.5 3 12 3-5.45L16 9" fill="none" stroke="#6772e5"
+                                          class="hover-strokeDark" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                </svg>
+                                <span id="api-status"></span>
+                            </h3>
+                        </a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="dropdownSection right" data-dropdown="company">
+                <div class="dropdownContent">
+
+                    <ul class="linkGroup linkList companyGroup">
+                        <li><a class="linkContainer item-about" href="#">
+                            <h3 id="about-stripe" class="linkTitle linkIcon">
+                                About Stripe
+                            </h3>
+                        </a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    //    const ul = document.getElementById('authors');
+    const url = 'https://jsonblob.com/api/jsonBlob/6766327f-607d-11e9-95ef-9bcb815ba4a4';
+    fetch(url)
+        .then(
+            function (response) {
+                if (response.status !== 200) {
+                    console.log('Looks like there was a problem. Status Code: ' +
+                        response.status);
+                    return;
+                }
+
+                // Examine the text in the response
+                response.json().then(function (data) {
+                    console.log(data);
+                    $('#documentation-title').text(data['developers'][0].title);
+                    $('#documentation-sub-title').text(data['developers'][0]['sub-title']);
+                    $('#full-api-reference').text(data['developers'][1]['title']);
+                    $('#api-status').text(data['developers'][2]['title']);
+
+                    $('#payments-title').text(data['product'][0]['title']);
+                    $('#payments-sub-title').text(data['product'][0]['sub-title']);
+                    $('#billing-title').text(data['product'][1]['title']);
+                    $('#billing-sub-title').text(data['product'][1]['sub-title']);
+                    $('#content-title').text(data['product'][2]['title']);
+                    $('#content-sub-title').text(data['product'][2]['sub-title']);
+
+                    $('#about-stripe').text(data['company'][0]['title']);
+
+
+
+                    console.log(data['company'])
+                });
+            }
+        )
+        .catch(function (err) {
+            console.log('Fetch Error :-S', err);
+        });
+</script>
+<script src="dist/all.js"></script>
+</body>
+</html>
+
+
